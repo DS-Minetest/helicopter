@@ -13,7 +13,7 @@ Todo:
 
 License of source code:
 -----------------------
-original code by Pavel_S: GPL_v2 (see file LICENSE)  
+original code by Pavel_S: GPL_v2 or any later version (see file LICENSE)  
 changes / complete rework by DS: License to be chosen  
 `matrix.lua` file: CC0  
 
