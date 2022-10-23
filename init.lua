@@ -19,9 +19,7 @@ local friction_water_constant = 1
 -- helpers and co.
 --
 
-if not minetest.global_exists("matrix3") then
-	dofile(minetest.get_modpath("helicopter") .. DIR_DELIM .. "matrix.lua")
-end
+local matrix3 = dofile(minetest.get_modpath("helicopter") .. "/matrix.lua")
 
 local creative_exists = minetest.global_exists("creative")
 local gravity = tonumber(minetest.settings:get("movement_gravity")) or 9.8
@@ -216,9 +214,8 @@ minetest.register_entity("helicopter:heli", {
 			-- detach the driver first (puncher must be driver)
 			puncher:set_detach()
 			puncher:set_eye_offset({x = 0, y = 0, z = 0}, {x = 0, y = 0, z = 0})
-			player_api.player_attached[name] = nil
-			-- player should stand again
 			player_api.set_animation(puncher, "stand")
+			player_api.player_attached[name] = nil
 			self.driver_name = nil
 		end
 
@@ -244,9 +241,8 @@ minetest.register_entity("helicopter:heli", {
 			-- detach the player
 			clicker:set_detach()
 			clicker:set_eye_offset({x = 0, y = 0, z = 0}, {x = 0, y = 0, z = 0})
-			player_api.player_attached[name] = nil
-			-- player should stand again
 			player_api.set_animation(clicker, "stand")
+			player_api.player_attached[name] = nil
 			-- gravity
 			self.object:set_acceleration(vector.multiply(vector_up, -gravity))
 
@@ -258,9 +254,9 @@ minetest.register_entity("helicopter:heli", {
 					{object = self.object, gain = 2.0, max_hear_distance = 32, loop = true,})
 			self.object:set_animation_frame_speed(30)
 			-- attach the driver
+			player_api.player_attached[name] = true
 			clicker:set_attach(self.object, "", {x = 0, y = 10.5, z = 2}, {x = 0, y = 0, z = 0})
 			clicker:set_eye_offset({x = 0, y = 7, z = 2}, {x = 0, y = 8, z = -5})
-			player_api.player_attached[name] = true
 			-- make the driver sit
 			minetest.after(0.2, function()
 				local player = minetest.get_player_by_name(name)

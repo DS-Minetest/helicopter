@@ -1,7 +1,7 @@
 -- everything in this file is licensed under CC0
 -- see also minetest PR #8515
 
-matrix3 = {}
+local matrix3 = {}
 
 function matrix3.new(a, ...)
 	if not a then
@@ -85,9 +85,9 @@ function matrix3.tensor_multiply(a, b)
 	m1[4] = a.y
 	m1[7] = a.z
 	local m2 = matrix3.new()
-	m2[1] = a.x
-	m2[2] = a.y
-	m2[3] = a.z
+	m2[1] = b.x
+	m2[2] = b.y
+	m2[3] = b.z
 	return matrix3.multiply(m1, m2)
 end
 
@@ -197,3 +197,5 @@ function matrix3.from_pitch_yaw_roll(v)
 		cy * sx * sz + cz * sy,  -cy * cz * sx + sy * sz, cy * cx
 	}
 end
+
+return matrix3
