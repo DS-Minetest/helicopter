@@ -215,7 +215,7 @@ minetest.register_entity("helicopter:heli", {
 			puncher:set_detach()
 			puncher:set_eye_offset({x = 0, y = 0, z = 0}, {x = 0, y = 0, z = 0})
 			player_api.set_animation(puncher, "stand")
-			player_api.player_attached[name] = nil
+			player_api.player_attached[name] = false
 			self.driver_name = nil
 		end
 
@@ -242,7 +242,7 @@ minetest.register_entity("helicopter:heli", {
 			clicker:set_detach()
 			clicker:set_eye_offset({x = 0, y = 0, z = 0}, {x = 0, y = 0, z = 0})
 			player_api.set_animation(clicker, "stand")
-			player_api.player_attached[name] = nil
+			player_api.player_attached[name] = false
 			-- gravity
 			self.object:set_acceleration(vector.multiply(vector_up, -gravity))
 
@@ -256,7 +256,7 @@ minetest.register_entity("helicopter:heli", {
 			-- attach the driver
 			player_api.player_attached[name] = true
 			clicker:set_attach(self.object, "", {x = 0, y = 10.5, z = 2}, {x = 0, y = 0, z = 0})
-			clicker:set_eye_offset({x = 0, y = 7, z = 2}, {x = 0, y = 8, z = -5})
+			clicker:set_eye_offset({x = 0, y = 12, z = 2}, {x = 0, y = 20, z = -5})
 			-- make the driver sit
 			minetest.after(0.2, function()
 				local player = minetest.get_player_by_name(name)
