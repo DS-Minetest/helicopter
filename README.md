@@ -30,4 +30,4 @@ Bell47 is a FREE 3D model made by Melkor (https://forum.minetest.net/memberlist.
 For more information, see Licence.txt  
 (+ Modified by DS)  
 
-the item textures are probably by Pavel_S, TODO  
+Original textures and helicopter model (`old_model` branch) by Pavel_S | License: CC BY-SA
