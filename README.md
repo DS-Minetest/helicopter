@@ -1,33 +1,28 @@
-Minetest 5.1-dev+ mod: Simple helicopter
-========================================
-originally by Pavel_S
-reworked by DS
+<!--
+SPDX-FileCopyrightText: 2024 DS
 
-Todo:
------
+SPDX-License-Identifier: CC0-1.0
+-->
 
-- Replace craftitems and recipes
-- Add screenshot and description
-- Add code license
-- Fix that z-fighting
+# Minetest 5.1-dev+ mod: Simple helicopter
 
-License of source code:
------------------------
-original code by Pavel_S: GPL_v2 or any later version (see file LICENSE (TODO))
-changes / complete rework by DS: GPL_v2 or any later version
-`matrix.lua` file: CC0
+* originally by Pavel_S
+* reworked by DS
 
-License of media (textures and sounds):
----------------------------------------
+## Licenses
 
-helicopter_motor.ogg by  Robinhood76 | License: Attribution Noncommercial
+REUSE is used.
 
-helicopter_water_driblet.png by DS | License: CC0
+Code: GPL-2.0-or-later AND Apache-2.0 AND CC0-1.0
 
-helicopter model and texture:
+Media: CC-BY-NC-SA-3.0 AND CC-BY-NC-SA-4.0 AND CC-BY-SA-4.0 AND CC0-1.0
 
-Bell47 is a FREE 3D model made by Melkor (https://forum.minetest.net/memberlist.php?mode=viewprofile&u=301) for the free game "Minetest" and is released under CC-BY-NC-SA 3.0 http://creativecommons.org/licenses/by-nc-sa/3.0/
-For more information, see Licence.txt
-(+ Modified by DS)
+For copyright holders and more fine grained licenses, see the copyright header
+of each file, or the file's dot license file, if existent, or `.reuse/dep5`.
 
-Original textures and helicopter model (`old_model` branch) by Pavel_S | License: CC BY-SA
+## TODO
+
+* Add helicopter variant from `old_model` branch to master. (Should be new item,
+  such that players can use both. Maybe use different specs, like motor strength.)
+* Add screenshot and description
+* Fix that z-fighting

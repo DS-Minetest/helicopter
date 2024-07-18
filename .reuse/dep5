@@ -1,0 +1,40 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: helicopter
+Upstream-Contact: DS <>
+Source: https://github.com/Desour/helicopter
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
+
+Files:
+	textures/helicopter_blades.png
+	textures/helicopter_blades_inv.png
+	textures/helicopter_cabin_inv.png
+	textures/helicopter_heli_inv.png
+Copyright: 2024 Pavel_S
+License: CC-BY-SA-4.0
+
+Files: sounds/helicopter_motor.ogg
+Copyright: 2010 Robinhood76
+License: CC-BY-NC-SA-4.0
+# As far as I can tell, this is the source, I'm not 100% sure though:
+# https://freesound.org/people/Robinhood76/sounds/94867/
+
+Files:
+	media_src/bell47.dae
+	media_src/bell47.png
+	media_src/bell47.xcf
+	models/helicopter_heli.b3d
+	textures/helicopter_heli.png
+Copyright: 2024 Melkor
+Contributor: 2024 DS
+License: CC-BY-NC-SA-3.0
+# This Melkor:
+# https://forum.minetest.net/memberlist.php?mode=viewprofile&u=301
+
+Files: textures/helicopter_water_driblet.png
+Copyright: 2024 DS
+License: CC0-1.0

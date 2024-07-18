@@ -1,3 +1,7 @@
+-- SPDX-FileCopyrightText: 2024 DS
+-- SPDX-FileCopyrightText: 2024 Pavel_S
+--
+-- SPDX-License-Identifier: GPL-2.0-or-later
 
 --
 -- constants

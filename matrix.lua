@@ -1,3 +1,10 @@
+-- SPDX-FileCopyrightText: 2024 DS
+--
+-- SPDX-License-Identifier: Apache-2.0
+--
+-- The file comes from here:
+-- https://github.com/minetest/minetest/pull/8515
+
 -- everything in this file is licensed under CC0
 -- see also minetest PR #8515
 
